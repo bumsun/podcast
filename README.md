@@ -9,4 +9,4 @@
 6) Можно добавить плавное затухание в начало или конец записи
 7) Загрузка обложки подкаста, названия и описания эпизода
 
-Ссылка на Apk файл - https://www.dropbox.com/s/wffmubhtsqxswc9/app-release.apk?dl=0
+Ссылка на Apk файл - https://yadi.sk/d/S-Sunn8pBEslpw
