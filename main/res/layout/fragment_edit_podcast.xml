@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/mainLL"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+    <include layout="@layout/toolbar"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.core.widget.NestedScrollView
+            android:layout_marginBottom="68dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@color/line" />
+                <LinearLayout
+                    android:layout_margin="16dp"
+                    android:orientation="vertical"
+                    android:background="@drawable/round_equalizer_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <AbsoluteLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="144dp">
+                        <com.mountainasdheads.cast.utils.waveform.view.WaveformView
+                            android:id="@+id/waveform"
+                            android:layout_width="match_parent"
+                            android:layout_height="144dp" />
+
+                        <com.mountainasdheads.cast.utils.waveform.view.MarkerView android:id="@+id/startmarker"
+                            android:nextFocusDown="@+id/endmarker"
+                            android:layout_width="wrap_content"
+                            android:paddingLeft="48dp"
+                            android:paddingRight="48dp"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/blue_marker"/>
+
+                        <com.mountainasdheads.cast.utils.waveform.view.MarkerView android:id="@+id/endmarker"
+                            android:nextFocusUp="@+id/startmarker"
+                            android:nextFocusDown="@+id/info"
+                            android:paddingLeft="48dp"
+                            android:paddingRight="48dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/blue_marker"/>
+
+                    </AbsoluteLayout>
+<!--                    <RelativeLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="122dp">-->
+
+<!--                    </RelativeLayout>-->
+                    <LinearLayout
+                        android:padding="8dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/playIV"
+                            android:src="@drawable/ic_play_blue"
+                            android:layout_width="44dp"
+                            android:layout_height="44dp"/>
+                        <View
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"/>
+                        <ImageView
+                            android:id="@+id/cutIV"
+                            android:src="@drawable/ic_cut_gray"
+                            android:layout_marginEnd="4dp"
+                            android:layout_width="44dp"
+                            android:layout_height="44dp"/>
+                        <ImageView
+                            android:id="@+id/undoIV"
+                            android:src="@drawable/ic_undo_gray"
+                            android:layout_width="44dp"
+                            android:layout_height="44dp"/>
+                        <View
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"/>
+                        <ImageView
+                            android:id="@+id/musicIV"
+                            android:src="@drawable/ic_music_gray"
+                            android:layout_marginEnd="4dp"
+                            android:layout_width="44dp"
+                            android:layout_height="44dp"/>
+                        <ImageView
+                            android:id="@+id/growIV"
+                            android:src="@drawable/ic_volume_grow_gray"
+                            android:layout_marginEnd="4dp"
+                            android:layout_width="44dp"
+                            android:layout_height="44dp"/>
+                        <ImageView
+                            android:id="@+id/downIV"
+                            android:src="@drawable/ic_volume_down_gray"
+                            android:layout_width="44dp"
+                            android:layout_height="44dp"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_margin="16dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:text="Таймкоды"
+                        android:textAllCaps="true"
+                        android:textSize="13sp"
+                        android:layout_marginBottom="9dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:textColor="@color/grey"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/timeCodesRV"
+                        android:visibility="gone"
+                        android:nestedScrollingEnabled="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <LinearLayout
+                        android:id="@+id/addTimeCodeLL"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="16dp"
+                            android:src="@drawable/ic_plus"
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"/>
+                        <TextView
+                            android:textSize="16sp"
+                            android:layout_gravity="center_vertical"
+                            android:text="Добавить таймкод"
+                            android:textColor="@color/button_stroke"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <TextView
+                        android:text="Отметки времени с названием темы. Позволяют слушателям легче путешествовать по подкасту."
+                        android:layout_width="match_parent"
+                        android:textColor="@color/grey"
+                        android:textSize="13sp"
+                        android:layout_marginTop="4dp"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/line" />
+            <Button
+                android:id="@+id/saveBTN"
+                android:text="Сохранить"
+                style="@style/large_button"
+                />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

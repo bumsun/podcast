@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#ffffff</color>
+    <color name="colorAccent">#4986CC</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="black_12">#1F000000</color>
+    <color name="grey">#818C99</color>
+    <color name="grey_bg">#F2F3F5</color>
+    <color name="button_pressed">#88B7EC</color>
+    <color name="line">#D7D8D9</color>
+    <color name="dark_grey">#6D7885</color>
+    <color name="button_stroke">#3F8AE0</color>
+    <color name="button_stroke_pressed">#1A3F8AE0</color>
+    <color name="time_color">#99A2AD</color>
+    <color name="search_bar_bg">#EBEDF0</color>
+
+    <color name="waveform_selected">#3F8AE0</color>
+    <color name="waveform_unselected">#633F8AE0</color>
+    <color name="waveform_unselected_bkgnd_overlay">#EAEFF3</color>
+    <color name="selection_border">#F2F3F5</color>
+    <color name="playback_indicator">#FF3347</color>
+    <color name="grid_line">#6D6D6D</color>
+    <color name="timecode">#000000</color>
+    <color name="timecode_shadow">#aa000000</color>
+    <color name="gray_background">#F2F3F5</color>
+    <color name="blue_stroke">#3F8AE0</color>
+</resources>
